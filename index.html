@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>
+            Alexa Marie Laguna, will you be my valentine??
+        </h1>
+        <div class="buttons">
+            <button id="yesButton">Yes</button>
+            <button id="noButton">No</button>
+        </div>
+    </div>
+</body>
+<style>
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100%;
+    }
+
+    .buttons  {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1em;
+    }
+    button {
+        font-size: 30px;
+        width: auto;
+        height: auto;
+        padding: 10px 20px;
+    }
+    body {
+        font-size: 30px;
+    }
+</style>
+<script>
+    const yesButton = document.getElementById('yesButton')
+    const noButton = document.getElementById('noButton')
+
+    yesButton.addEventListener('click', function() {
+        yesButton.remove()
+        noButton.remove()
+        document.querySelector('h1').textContent ='Thank you! See you on feb 14. I love youu!!!'
+    })
+    noButton.addEventListener('click', function() {
+        noButton.remove()
+        document.querySelector('h1').textContent ='Erorr! Invalid answer. Again, will you be by date?'
+    })
+
+    
+</script>
+
+</html>
